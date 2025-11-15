@@ -19,7 +19,7 @@ import {
   Share2,
   Edit,
   TrendingUp,
-  Sparkles
+  HandHeart
 } from 'lucide-react';
 import { UserProfile } from '@/lib/types';
 import { formatMoney } from '@/lib/gamification';
@@ -44,7 +44,7 @@ export function UserProfileComponent({
   return (
     <div className="space-y-6">
       {/* Header do Perfil */}
-      <Card className="overflow-hidden border-0 bg-gradient-to-br from-purple-600 via-pink-600 to-orange-500 p-8 text-white shadow-2xl">
+      <Card className="overflow-hidden border-0 bg-gradient-to-br from-blue-600 via-green-600 to-orange-500 p-8 text-white shadow-2xl">
         <div className="relative z-10">
           <div className="flex flex-col items-center gap-6 md:flex-row">
             {/* Avatar */}
@@ -92,7 +92,7 @@ export function UserProfileComponent({
                   </div>
                 )}
                 <div className="flex items-center gap-1">
-                  <Sparkles className="h-4 w-4" />
+                  <HandHeart className="h-4 w-4" />
                   <span>Desde {new Date(profile.joinedAt).toLocaleDateString('pt-BR')}</span>
                 </div>
               </div>
@@ -121,7 +121,7 @@ export function UserProfileComponent({
               ) : (
                 <>
                   <Button
-                    className="bg-white text-purple-600 hover:bg-white/90"
+                    className="bg-white text-blue-600 hover:bg-white/90"
                     onClick={onAddFriend}
                   >
                     <Users className="mr-2 h-4 w-4" />
@@ -155,7 +155,7 @@ export function UserProfileComponent({
       {/* Estatísticas Sociais */}
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Card className="p-6 text-center">
-          <Users className="mx-auto mb-2 h-8 w-8 text-purple-500" />
+          <Users className="mx-auto mb-2 h-8 w-8 text-blue-500" />
           <p className="text-3xl font-bold text-gray-900 dark:text-gray-100">
             {profile.friends}
           </p>
@@ -163,7 +163,7 @@ export function UserProfileComponent({
         </Card>
 
         <Card className="p-6 text-center">
-          <ImageIcon className="mx-auto mb-2 h-8 w-8 text-pink-500" />
+          <ImageIcon className="mx-auto mb-2 h-8 w-8 text-green-500" />
           <p className="text-3xl font-bold text-gray-900 dark:text-gray-100">
             {profile.posts}
           </p>
@@ -179,7 +179,7 @@ export function UserProfileComponent({
         </Card>
 
         <Card className="p-6 text-center">
-          <TrendingUp className="mx-auto mb-2 h-8 w-8 text-green-500" />
+          <TrendingUp className="mx-auto mb-2 h-8 w-8 text-emerald-500" />
           <p className="text-3xl font-bold text-gray-900 dark:text-gray-100">
             {formatMoney(profile.stats.moneySaved)}
           </p>
@@ -208,7 +208,7 @@ export function UserProfileComponent({
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                     Dias sem fumar
                   </span>
-                  <span className="text-2xl font-bold text-purple-600">
+                  <span className="text-2xl font-bold text-blue-600">
                     {profile.stats.daysSmokeFree}
                   </span>
                 </div>
@@ -318,14 +318,14 @@ export function UserProfileComponent({
 
             {!profile.isPremium ? (
               <div className="py-12 text-center">
-                <Crown className="mx-auto mb-4 h-16 w-16 text-purple-300" />
+                <Crown className="mx-auto mb-4 h-16 w-16 text-blue-300" />
                 <p className="mb-2 text-lg font-semibold text-gray-900 dark:text-gray-100">
                   Recurso Premium
                 </p>
                 <p className="mb-4 text-gray-600 dark:text-gray-400">
                   Assine o plano Premium para postar e ver postagens
                 </p>
-                <Button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
+                <Button className="bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600">
                   <Crown className="mr-2 h-4 w-4" />
                   Assinar Premium
                 </Button>
@@ -343,9 +343,9 @@ export function UserProfileComponent({
             ) : (
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {/* Aqui viriam as postagens reais */}
-                <div className="aspect-square rounded-lg bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20" />
-                <div className="aspect-square rounded-lg bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-blue-900/20 dark:to-cyan-900/20" />
-                <div className="aspect-square rounded-lg bg-gradient-to-br from-green-100 to-emerald-100 dark:from-green-900/20 dark:to-emerald-900/20" />
+                <div className="aspect-square rounded-lg bg-gradient-to-br from-blue-100 to-green-100 dark:from-blue-900/20 dark:to-green-900/20" />
+                <div className="aspect-square rounded-lg bg-gradient-to-br from-green-100 to-orange-100 dark:from-green-900/20 dark:to-orange-900/20" />
+                <div className="aspect-square rounded-lg bg-gradient-to-br from-orange-100 to-blue-100 dark:from-orange-900/20 dark:to-blue-900/20" />
               </div>
             )}
           </Card>

@@ -1,4 +1,4 @@
-// 🎮 FreshLife - Sistema de Gamificação
+// 🎮 VamosJuntos! - Sistema de Gamificação
 import { UserProgress, Stats, Achievement, HealthMilestone } from './types';
 
 export function calculateStats(progress: UserProgress): Stats {
@@ -110,7 +110,7 @@ export const achievements: Achievement[] = [
   {
     id: 'first-friend',
     title: '🤝 Primeira Conexão',
-    description: 'Você fez seu primeiro amigo no FreshLife!',
+    description: 'Você fez seu primeiro amigo no VamosJuntos!',
     icon: 'UserPlus',
     unlocked: false,
     requirement: { type: 'social', value: 1 },

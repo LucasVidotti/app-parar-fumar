@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VamosJuntos! - Juntos somos mais fortes",
-  description: "Sua jornada para parar de fumar começa aqui. Conecte-se com uma comunidade que te apoia.",
+  title: "Criado com a Lasy",
+  description: "Projeto criado com Lasy AI",
 };
 
 export default function RootLayout({
